@@ -20,39 +20,40 @@
             
             <p>HTML, CSS, Javascript에 대한 기술적 이해와 경험이 있는 분을 찾습니다.</p>
             <hr>
-            <form >
+            <form action="./book_167.php" method="get">
                 <h4>개인 정보</h4>
                 <ul>
                     <li>
-                    <label for="name">이름</label>
-                    <input type="text" id="name" placeholder="공백 없이 입력하세요."> <br>
+                    <label for="nam">이름</label>
+                    <input type="text" name="name" id="nam" placeholder="공백 없이 입력하세요."> <br>
                     </li>
-                    <li></li>
-                    <label for="phone">연락처</label>
-                    <input type="tel" id="phone">
+                    <li>
+                    <label for="phon">연락처</label>
+                    <input type="tel" name="phone" id="phon">
                     </li>
                 </ul>
                 <h4>지원 분야</h4>
                 <ul>
                     <li>
-                    <input type="radio" name="지원분야" id="web">
+                    <input type="radio" name="지원분야" id="web" value="web">
                     <label for="web">웹 퍼블리싱</label> <br>
                     </li>
                     <li>
-                    <input type="radio" name="지원분야" id="app"> 
+                    <input type="radio" name="지원분야" id="app" value="app"> 
                     <label for="app">웹 애플리케이션 개발</label> <br>
                     </li>
                     <li>
-                    <input type="radio" name="지원분야" id="개발환경">
+                    <input type="radio" name="지원분야" id="개발환경" value="개발환경">
                     <label for="개발환경">개발 환경 개선</label> <br>
                     </li>
                 </ul>
-            <h4>지원 동기</h4>
-            
-            <textarea cols="60" rows="5" placeholder="본사 지원 동기를 간략히 써 주세요." ></textarea> 
-            <br>
-            <input type="submit" value="접수하기"> <input type="reset" value="다시 쓰기" >
+                <h4>지원 동기</h4>
+                
+                <label><textarea cols="60" rows="5" placeholder="본사 지원 동기를 간략히 써 주세요." name="tta"></textarea> </label>
+                <br>
+                <input type="submit" value="접수하기"> <input type="reset" value="다시 쓰기" >
             </form>
         </div>
+        <a href="https://hello2026.dothome.co.kr" target="_blank">홈페이지로 가기</a>
     </body>
 </html>

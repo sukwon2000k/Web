@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>점심 메뉴 추천</title>
+
+    <style>
+        body{
+            text-align:center;
+            margin-top:100px;
+            font-family:맑은 고딕;
+        }
+
+        #box{
+            width:400px;
+            margin:auto;
+            padding:30px;
+            border:3px solid black;
+            border-radius:15px;
+        }
+
+        h1{
+            margin-bottom:30px;
+        }
+
+        #menu{
+            font-size:30px;
+            font-weight:bold;
+            color:tomato;
+            margin:30px 0;
+        }
+
+        button{
+            width:150px;
+            height:50px;
+            font-size:18px;
+            cursor:pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="box">
+
+        <h1>🍚 점심 메뉴 추천 🍚</h1>
+
+        <div id="menu">
+            메뉴를 추천해드립니다!
+        </div>
+
+        <button onclick="recommend()">
+            추천 받기
+        </button>
+
+    </div>
+
+    <script>
+
+        const lunch = [
+            "서울밥집",
+            "왕돈가스",
+            "밥맛나는집",
+            "마라섬",
+            "국밥",
+            "서울밥집",
+            "김밥천국",
+            "서울밥집",
+            "굶기",
+            "편의점",
+            "서울밥집",
+            "떡볶이"
+        ];
+
+        function recommend(){
+
+            let random =
+            Math.floor(Math.random() * lunch.length);
+
+            document.getElementById("menu").innerHTML
+            = lunch[random];
+
+        }
+
+    </script>
+
+</body>
+</html>
