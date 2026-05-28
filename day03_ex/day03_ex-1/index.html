@@ -6,7 +6,7 @@
     </head>
     <body>
         <h1>예약 정보</h1>
-        <form action="./book_166.php" method="get">
+        <form action="./book_166.php" method="post">
             <ul>
                 <li>
                     <label for="r-name">이름</label>
@@ -14,7 +14,7 @@
                 </li>
                 <li>
                     <label for="r-phone">전 화</label>
-                    <input type="tel" id="r-phone" name="phone">
+                    <input type="tel" id="r-phone" name="phone" placeholder="-는 빼고 입력하세요.">
                 </li>
                 <li>
                     <label for="r-mail">이메일</label>
@@ -26,5 +26,10 @@
             </ul>
         </form>
         <a href="https://hello2026.dothome.co.kr" target="_blank">홈페이지로 가기</a>
+
+        <form action="./result.php">
+            <input type="submit" value="모든 항목 보러가기">
+        </form>
     </body>
+
 </html>
