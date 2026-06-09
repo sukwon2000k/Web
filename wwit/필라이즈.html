@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=4, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #king{
+            width: 800px;
+            padding: 0px;
+            margin: 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #container{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        
+        #header-img{
+            width: 20px;
+        }
+
+        #aaa,#header-foot{
+            color: #555;
+        }
+        main img{
+            width: 30%;
+            border: 1px solid #888;
+            background-color: #eee;
+            border-radius: 10px;
+            box-shadow: 1px 1px 5px black;
+            margin: 10px;
+        }
+        main img:hover{
+            cursor: pointer;
+            background-color: rgb(155, 83, 197);
+        }
+        footer{
+    margin-top: 50px;
+}
+
+button{
+    width: 100%;
+    height: 60px;
+
+    border: none;
+    border-radius: 15px;
+
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+
+    background: #6d28d9;
+}
+    </style>
+</head>
+<body>
+    <div id="king">
+    <header id="container">
+        <img id="header-img" src="./image/arrow (1).png" alt="back">
+        <h3 id="aaa">4/10</h3>
+        </header>
+    
+
+
+    <main>
+        <h3 id="main-text">고민되시거나 개선하고 싶은 건강고민을 선택해주세요</h3>
+        <p id="main-foot">최대 8개 선택</p>
+        <img id="img1" src="./image/view.png" alt="view">
+        <img id="img2" src="./image/blood-drop.png" alt="blood">
+        <img id="img3" src="./image/diamond-ring.png" alt="ring">
+        <img id="img4" src="./image/blood-drop.png" alt="blod">
+        <img id="img5" src="./image/arrow.png" alt="back">
+        <img id="img6" src="./image/view.png" alt="viw">
+    </main>
+
+    <footer>
+        <button id="footer-button">확인</button>
+    </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>4의 배수일까 아닐까</h1>
+    <script>
+        n=prompt('숫자를 입력하시오.')
+        if(n==''||n==null){
+            document.write('결과를 보여주지 않습니다.')
+        }else if(n%4==0){
+            document.write(`${n}(은)는 4의 배수입니다.`)
+        }else{
+            document.write(`${n}는 4의 배수가 아닙니다.`)
+        }
+        
+    </script>
+</body>
+</html>
