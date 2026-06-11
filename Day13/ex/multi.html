@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>이미지파일 읽기 및 미리보기</h2>
+    <input type="file" id="in2" multiple onchange="bbb()">
+    <hr>
+    <div id="multi"></div>
+    <script>
+        function bbb(){
+            //사용자가 선택한 파일들 받기
+            var files=document.getElementById('in2').files
+            //div에 전에 받았던 파일들 초기화
+            document.getElementById('multi').innerHTML=''
+            
+            for(let i=0; i<files.length; i++){
+                //1. 파일리더 생성
+                let fr= new FileReader();
+                //2. 로딩완료되면 실행될 함수등록
+                fr.onload=function(){
+                    //alert(fr.result);//선택한 이미지의 URL경로
+                    let img=document.createElement('img');
+                    img.src=fr.result
+                    img.style.width='150px'
+                    img.style.margin='10px'
+
+                    document.getElementById('multi').appendChild(img);
+                }
+                //3. 파일읽기 요청...단, <img>요소에 보여줘야 하기.. 파일경로(URL)형태로 읽어달라고 요청
+                fr.readAsDataURL(files[i]); //첫번째 선택한 이미지 읽기
+            }
+            
+        }
+    </script>
+    
+</body>
+</html>
