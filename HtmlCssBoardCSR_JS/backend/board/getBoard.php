@@ -1,0 +1,23 @@
+<?php
+    header('Content-Type:application/json; charset=utf-8');
+
+    //사용자가 GET방식으로 요청한 게시글 번호
+    $no=$_GET['no'];
+
+    //web_board 테이블에서 $no 번에 해당하는 한줄 데이터를 뽑아서.. json형식으로 응답
+    $db=mysqli_connect('localhost','hello2026','a1s2d3f4!','hello2026');
+    mysqli_query($db, 'set names utf8');
+
+    //특정 번호의 게시글 요청 쿼리문 작성
+    $sql="SELECT * FROM web_board WHERE no=$no";
+    $result = mysqli_query($db,$sql);
+
+    //결과표에는 해당되는 게시글 1개만 가져오면 되니.. 반복문 없이.
+    $row=mysqli_fetch_array($result,MYSQLI_ASSOC); //연관배열로 한줄뽑기
+    echo json_encode($row); //json형식으로 응답
+
+
+
+
+
+?>
